@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  node:
+    working_dir: "/var/www/html"
+    build:
+      context:  "node"    
+    container_name: "node"       
+    ports:
+      - "80:3000"
+      - "300:3001"
+    volumes:
+      - "${WEBROOT}:/var/www/html/"
