@@ -10,6 +10,9 @@ Dockers system for development and play with node.
 The ports expose is 80
 The port also expose is 300 
 
+The container Node also have PM2.
+
+
 ## Redis 
 
 
