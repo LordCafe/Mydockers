@@ -10,3 +10,18 @@ services:
       - "300:3001"
     volumes:
       - "${WEBROOT}:/var/www/html/"
+  redis :
+    container_name: "redis"
+    image: redis:6.2-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      node_networks:
+        aliases:
+          - redis_host
+networks:
+  node_networks:
+    name: node_net
+    driver: bridge
+    ipam:
+      driver: default
