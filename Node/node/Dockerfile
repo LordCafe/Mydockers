@@ -6,5 +6,6 @@ RUN npm install -g pm2
 RUN apk add --no-cache tzdata
 ENV TZ=America/Mexico_City
 USER node
+
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["node"] 
